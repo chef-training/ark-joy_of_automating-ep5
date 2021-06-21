@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ark
+# Cookbook:: ark
 # Attributes:: default
 #
 #
@@ -35,7 +35,7 @@ pkgs = %w(libtool autoconf) unless platform_family?('mac_os_x', 'windows')
 pkgs += %w(make) unless platform_family?('mac_os_x', 'windows', 'freebsd')
 pkgs += %w(unzip rsync gcc) unless platform_family?('mac_os_x', 'windows')
 pkgs += %w(autogen) unless platform_family?('rhel', 'fedora', 'mac_os_x', 'suse', 'windows')
-pkgs += %w(gtar) if platform?('freebsd') || platform?('smartos')
+pkgs += %w(gtar) if platform?('freebsd', 'smartos')
 pkgs += %w(gmake) if platform?('freebsd')
 pkgs += %w(xz-lzma-compat bzip2 tar) if platform_family?('rhel', 'fedora')
 pkgs += %w(shtool pkg-config) if platform_family?('debian')
