@@ -1,9 +1,9 @@
 #
-# Cookbook Name:: ark
+# Cookbook:: ark
 # Resource:: Ark
 #
 # Author:: Bryan W. Berry <bryan.berry@gmail.com>
-# Copyright 2012, Bryan W. Berry
+# Copyright:: 2012, Bryan W. Berry
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ attr_accessor :extension,
   :version
 
 attribute :owner, kind_of: String, default: 'root'
-attribute :group, kind_of: [String, Fixnum], default: 0
+attribute :group, kind_of: [String, Integer], default: 0
 attribute :url, kind_of: String, required: true
 attribute :path, kind_of: String, default: nil
 attribute :full_path, kind_of: String, default: nil
@@ -53,7 +53,7 @@ attribute :creates, kind_of: String, default: nil
 attribute :release_file, kind_of: String, default: ''
 attribute :strip_leading_dir, kind_of: [TrueClass, FalseClass, NilClass]
 attribute :strip_components, kind_of: Integer, default: 1
-attribute :mode, kind_of: Fixnum, default: 0755
+attribute :mode, kind_of: Integer, default: 0755
 attribute :prefix_root, kind_of: String, default: nil
 attribute :prefix_home, kind_of: String, default: nil
 attribute :prefix_bin, kind_of: String, default: nil
